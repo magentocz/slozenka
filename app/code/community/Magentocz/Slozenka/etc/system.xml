@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!--
+/** 
+* Magento CZ Module
+* 
+* NOTICE OF LICENSE 
+* 
+* This source file is subject to the Open Software License (OSL 3.0) 
+* that is bundled with this package in the file LICENSE.txt. 
+* It is also available through the world-wide-web at this URL: 
+* http://opensource.org/licenses/osl-3.0.php 
+* If you did of the license and are unable to 
+* obtain it through the world-wide-web, please send an email 
+* to magentocz@gmail.com so we can send you a copy immediately. 
+* 
+* @copyright Copyright (c) 2015 GetReady s.r.o. (https://getready.cz)
+* 
+*/
+/**
+ *
+ * @category   Magentocz
+ * @package    Magentocz_Slozenka
+ */
+-->
+<config>
+    <sections>
+        <sales_pdf translate="label" module="sales">
+            <groups>
+                <slozenka translate="label">
+                    <label>Remittance</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>10</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <allow_paymentmethods translate="label">
+                            <label>Print remittance for payment methods</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>magentocz_slozenka/system_config_source_paymentmethods</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </allow_paymentmethods>
+                        <print_whole_amount translate="label comment">
+                            <label>Print amount with decimal point</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment>E.g. 10.55 USD instead of 10 USD only.</comment>
+                        </print_whole_amount>
+                        <merchant_name translate="label">
+                            <label>Merchant Name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merchant_name>
+                        <merchant_street translate="label">
+                            <label>Merchant Street</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merchant_street>
+                        <merchant_city translate="label">
+                            <label>Merchant City</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merchant_city>
+                        <merchant_account_number_prefix translate="label">
+                            <label>Merchant Account Number Prefix</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merchant_account_number_prefix>
+                        <merchant_account_number translate="label">
+                            <label>Merchant Account Number</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merchant_account_number>
+                        <merchant_account_bank_code translate="label">
+                            <label>Merchant Account Bank Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merchant_account_bank_code>
+                    </fields>
+                </slozenka>                
+            </groups>
+        </sales_pdf>
+    </sections>
+</config>
